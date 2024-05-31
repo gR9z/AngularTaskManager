@@ -1,0 +1,16 @@
+@if (taskService.getTasks().length > 0) {
+
+<p>
+  {{ taskService.getUncompletedTaskCount() | taskCount }}
+</p>
+<app-filter (filterBy)="filterBy = $event" />
+
+@for (task of taskService.getTasks() | filterTasks:filterBy; track task) {
+<app-task-line
+  [task]="task"
+  (deleteTask)="deleteTask($event)"
+  (completeTask)="completeTask($event)"
+/>
+} } @else {
+<p>No tasks to display</p>
+}

@@ -1,0 +1,29 @@
+<form
+  class="form"
+  autocomplete="off"
+  [formGroup]="form"
+  (ngSubmit)="onSubmitEvent()"
+>
+  <div class="form__container">
+    <input
+      class="form__input"
+      type="text"
+      [placeholder]="placeHolderInput"
+      [formControl]="form.controls.task"
+    />
+
+    @if (form.controls.task.hasError('required') && form.controls.task.touched)
+    {
+    <span class="alert alert--error">This field is mandatory!</span>
+    } @if (form.controls.task.hasError('minlength') &&
+    form.controls.task.touched) {
+    <span class="alert alert--error">Minimum 3 characters!</span>
+    }
+
+    <div class="form__action">
+      <button class="button" type="submit" [disabled]="form.invalid">
+        Add task
+      </button>
+    </div>
+  </div>
+</form>

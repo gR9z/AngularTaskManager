@@ -1,0 +1,7 @@
+<input
+  type="checkbox"
+  (click)="completeHandler()"
+  [(ngModel)]="task.completed"
+/>
+<span [ngClass]="{ checked: task.completed }">{{ task.title }}</span>
+<button class="button" (click)="deleteHandler()">X</button>

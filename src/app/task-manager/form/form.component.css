@@ -1,0 +1,17 @@
+.form__container {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  flex-direction: row;
+  margin-top: 4rem;
+}
+
+.form__input {
+  padding-inline: 1rem;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+.form__action .button {
+  height: 100%;
+}

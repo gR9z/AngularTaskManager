@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  accent-color: var(--primary-color);
+}
+
+.checked {
+  text-decoration: line-through;
+}
