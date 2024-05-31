@@ -5,7 +5,7 @@ import { TaskManagerComponent } from './task-manager.component';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './tasks/list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TaskLineComponent } from './task-line/task-line/task-line.component';
+import { TaskLineComponent } from './task-line/task-line.component';
 import { FilterComponent } from './filter/filter.component';
 
 @NgModule({

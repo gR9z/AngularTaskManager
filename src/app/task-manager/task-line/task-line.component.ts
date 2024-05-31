@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ITask } from '../../../service/task.service/task.service';
+import { ITask } from '../../service/task.service/task.service';
 
 @Component({
   selector: 'app-task-line',
